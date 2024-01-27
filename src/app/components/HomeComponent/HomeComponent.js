@@ -100,7 +100,7 @@ export default function HomeComponent() {
     <React.Fragment>
       <div
         id="home"
-        className="min-h-[500px] max-h-[1200px] h-full w-full bg-gradient-home"
+        className="min-h-[500px] max-h-[1200px] h-full w-full bg-gradient-home dark:bg-gradient-home-dark"
         // style={{
         //     backgroundImage: "linear-gradient(62deg, #EEF7FB 0 50%, #A8AFDE 0% 100%)",
         //     minHeight: "500px",
@@ -111,7 +111,7 @@ export default function HomeComponent() {
       >
         <div className="container m-auto">
           <div className="grid grid-cols-12">
-            <div className="bg-white  flex flex-col justify-center col-span-12 md:col-span-5  md:bg-transparent">
+            <div className="bg-white  flex flex-col justify-center col-span-12 md:col-span-5  md:bg-transparent dark:bg-night dark:md:bg-transparent">
               <div className="container m-auto">
                 <div className="lg:pl-24 sm:pl-10 pl-0 py-20 md:py-0 md:text-start text-center">
                   <p
@@ -152,7 +152,7 @@ export default function HomeComponent() {
           <div className="container m-auto absolute">
             <div className="px-3">
               <div 
-              className="relative max-m-sm bottom-[70px] md:max-w-5xl xl:max-w-6xl px-5 lg:px-14 overflow-auto mx-auto bg-white rounded-2xl z-20"
+              className="relative max-m-sm bottom-[70px] md:max-w-5xl xl:max-w-6xl px-5 lg:px-14 overflow-auto mx-auto bg-white rounded-2xl z-20 dark:bg-night-50"
               style={{
                 boxShadow: "#48AFDE -10px 25px 50px 10px"
               }}
