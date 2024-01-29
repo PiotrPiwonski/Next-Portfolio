@@ -23,6 +23,15 @@ export default function Header() {
     console.log(isScrolled);
 
   return (
-    <div>Header</div>
+    <React.Fragment>
+        <header className={`${isScrolled ? "headerShow" : ""} fixed top-0 z-50 transition-all duration-500`}
+        style={{
+            backgroundColor: isScrolled ? "#fff" : "transparent",
+            boxShadow: isScrolled ? "#A8AFDE -10px 25px 50px 10px" : ""
+        }}
+        >
+            <h1 className='text-7xl'>testing the header</h1>
+        </header>  
+    </React.Fragment>
   )
 }
