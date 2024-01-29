@@ -7,6 +7,8 @@ export default function Home() {
   return (
     <main className="">
       <DarkMode />
+      <HomeComponent />
+      <HomeComponent />
       <HomeComponent />      
     </main>
   );
