@@ -21,7 +21,7 @@ export default function DarkMode () {
 
     return (
         <React.Fragment>
-            <div className="fixed top-4 right-4">
+            <div className="fixed top-4 right-4 z-[100]">
         <button
           onClick={toggleDarkMode}
           className="bg-night-50 px-4 py-2 rounded-full text-white dark:bg-white dark:text-night shadow-lg"
