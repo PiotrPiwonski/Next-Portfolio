@@ -2,6 +2,7 @@
 import HomeComponent from "./components/HomeComponent/HomeComponent";
 import DarkMode from "./components/DarkMode/DarkMode";
 import { Hind } from "next/font/google";
+import MySlider from "./components/SliderCard/MySlider";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -42,6 +43,9 @@ export default function Home() {
               current and one-of-a-kind.
             </p>
           </div>
+        </div>
+        <div className="">
+          <MySlider/>
         </div>
       </div>      
     </main>
