@@ -34,7 +34,7 @@ export default function Header() {
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             selectedIndex1={selectedIndex1}
-            setSelectedIndex1={selectedIndex1}
+            setSelectedIndex1={setSelectedIndex1}
             />
         </div>
         <header className={`${isScrolled ? "headerShow" : ""} w-full fixed top-0 z-50 transition-all duration-500`}
@@ -65,7 +65,7 @@ export default function Header() {
                         )}
                         <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black`}
                         href='/#home'
-                        onClick={() => selectedIndex1(0)}
+                        onClick={() => setSelectedIndex1(0)}
                         >
                             Home
                         </a>
@@ -78,7 +78,7 @@ export default function Header() {
                         )}
                         <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black`}
                         href='/#portfolio'
-                        onClick={() => selectedIndex1(1)}
+                        onClick={() => setSelectedIndex1(1)}
                         >
                             Portfolio
                         </a>
@@ -91,7 +91,7 @@ export default function Header() {
                         )}
                         <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black`}
                         href='/#about-me-component'
-                        onClick={() => selectedIndex1(2)}
+                        onClick={() => setSelectedIndex1(2)}
                         >
                             AboutMe
                         </a>
@@ -104,7 +104,7 @@ export default function Header() {
                         )}
                         <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black`}
                         href='/#home'
-                        onClick={() => selectedIndex1(3)}
+                        onClick={() => setSelectedIndex1(3)}
                         >
                             Hire Me
                         </a>
