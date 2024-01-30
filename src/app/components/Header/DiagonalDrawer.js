@@ -57,7 +57,7 @@ export default function DiagonalDrawer({
       </div>
       <header className={`fixed w-full transition-all duration-500 z-40 ${pathname === '/' ? 'top-0' : 'top-[0px]'}`}>
         <div className="relative">
-            <div className="z-20 absolute transform-gpu ease-in-out duration-500 transition-all scale-100 -translate-x-none -translate-y-none opacity-100 bg-[#223740] bg-opacity-95 w-full flex-col sm:flex-row lg:flex-col items-center justify-center">
+            <div className="z-20 absolute transform-gpu ease-in-out duration-500 transition-all scale-100 -translate-x-none -translate-y-none opacity-100 bg-[#223740] bg-opacity-95 w-full h-screen flex flex-col sm:flex-row lg:flex-col items-center justify-center">
                 <nav className="text-white font-recoletaBold text-center text-4xl lg:text-4xl 2xl:text-6xl uppercase">
                     <ul className="flex flex-col">
                         <li className="group my-4 xl:my-4 2xl:my-6 relative">
