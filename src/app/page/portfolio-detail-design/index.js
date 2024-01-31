@@ -26,7 +26,7 @@ export default function index({id, data, DataArray}) {
             </div>        
         </div>
         <div 
-        className='grid grid-cols-12 relative space-x-0 lg:space-x-0 '
+        className='grid grid-cols-12 relative space-x-0 lg:space-x-8'
         style={{
             background: "linear-gradient(90deg, rgba(238, 247, 251, 1) 58%, rgba(255, 255, 255, 1) 52%)",
 
