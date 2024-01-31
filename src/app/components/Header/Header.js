@@ -62,7 +62,7 @@ export default function Header() {
                         ) : (
                             <span className='menu-effect transform opacity-100 rotate-12 group-hover:-rotate-12 group-hover:opacity-100'></span>
                         )}
-                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
+                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} ${selectedIndex1 === 0 ? "dark:text-[#666D47]" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
                         href='/#home'
                         onClick={() => setSelectedIndex1(0)}
                         >
@@ -75,7 +75,7 @@ export default function Header() {
                         ) : (
                             <span className='menu-effect transform opacity-100 rotate-12 group-hover:-rotate-12 group-hover:opacity-100'></span>
                         )}
-                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
+                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} ${selectedIndex1 === 0 ? "dark:text-[#666D47]" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
                         href='/#portfolio'
                         onClick={() => setSelectedIndex1(1)}
                         >
@@ -88,7 +88,7 @@ export default function Header() {
                         ) : (
                             <span className='menu-effect transform opacity-100 rotate-12 group-hover:-rotate-12 group-hover:opacity-100'></span>
                         )}
-                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
+                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} ${selectedIndex1 === 0 ? "dark:text-[#666D47]" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
                         href='/#about-me-component'
                         onClick={() => setSelectedIndex1(2)}
                         >
@@ -101,7 +101,7 @@ export default function Header() {
                         ) : (
                             <span className='menu-effect transform opacity-100 rotate-12 group-hover:-rotate-12 group-hover:opacity-100'></span>
                         )}
-                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
+                        <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} ${selectedIndex1 === 0 ? "dark:text-[#666D47]" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
                         href='/#home'
                         onClick={() => setSelectedIndex1(3)}
                         >

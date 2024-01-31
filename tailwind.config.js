@@ -11,7 +11,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gradient-home": "linear-gradient(62deg, #EEF7FB 0 50%, #A8AFDE 0% 100%)",
-        "gradient-home-dark": "linear-gradient(62deg, #0D1120 0 50%, #A8AFDE 0% 100%)"        
+        "gradient-home-dark": "linear-gradient(62deg, #0D1120 0 50%, #A8AFDE 0% 100%)",
+        "gradient-portfolio": "linear-gradient(-62deg, #EEF7FB 0 45%, white 0% 100%)",
+        "gradient-portfolio-dark": "linear-gradient(-62deg, #0c4a64 0 45%, #0D1120 0% 100%)"        
       },
       colors: {
         night: {
