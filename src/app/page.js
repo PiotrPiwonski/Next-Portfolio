@@ -1,8 +1,9 @@
 "use client";
 import HomeComponent from "./components/HomeComponent/HomeComponent";
 import DarkMode from "./components/DarkMode/DarkMode";
-import { Hind } from "next/font/google";
 import MySlider from "./components/SliderCard/MySlider";
+import { Hind } from "next/font/google";
+
 
 const hind = Hind({
   subsets: ["latin"],
@@ -17,15 +18,15 @@ export default function Home() {
       <HomeComponent />
       <div 
       id="portfolio"
-      className="mt-0 pt-5 -mb-40"
-      style={{
-        backgroundImage: "linear-gradient(-62deg, #EEF7FB 0 45%, white 0% 100%)",
-        width: "100%"
-      }}
+      className="mt-0 pt-5 -mb-40 bg-[#0c4a64], bg-gradient-portfolio w-full dark:bg-gradient-portfolio-dark"
+      // style={{
+      //   backgroundImage: "linear-gradient(-62deg, #EEF7FB 0 45%, white 0% 100%)",
+      //   width: "100%"
+      // }}
       >
         <div className="container m-auto">
           <p 
-          className="text-[300px] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden"
+          className="text-[300px] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden dark:text-night-50"
           style={{transform: "translate(0px, -20px)"}}
           >
             portfolio
