@@ -60,7 +60,7 @@ export default function index({ id, data, DataArray }) {
             "linear-gradient(90deg, rgba(84, 167, 195, 1) 58%, rgba(255, 255, 255, 1) 52%)",
         }}
       >
-        <div className="col-span-12 lg:col-span-8 mb-20 scrol lg:px-0 sm:px-20">
+        <div className="col-span-12 lg:col-span-8 mb-20 scroll lg:px-0 sm:px-20">
           {data?.images.map((item) => (
             <div
               key={item}
