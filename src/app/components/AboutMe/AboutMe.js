@@ -139,6 +139,31 @@ export default function AboutMe() {
               ))}
             </div>
           </div>
+          <div className="w-full sm:w-1/2 lg:w-5/12 overflow-visible px-0 sm:pl-6 xl:px-10">
+            <div className="bg-white rounded-xl p-10 xl:p-12 shadow-accent-color relative">
+              <section
+                className={`fade-left overflow-hidden ${
+                  isFaded ? "fade-out" : ""
+                }`}
+              >
+                <p
+                  className={`text-[#47626D] ${hind.className} text-lg sm:text-base lg:text-xl transition-all duration-500 transform opacity-100`}
+                >
+                  My Tech Skills Are:
+                </p>
+                <h2 className="font-recoletaBold text-[#47626D] text=3xl sm:text-2xl md:text-3xl mb-6 w-44 md:w-56 transition duration-500 transform opacity-100">
+                  {mapData.title}
+                </h2>
+                <ul className={`${hind.className} font-[300] list-disc text-[#47626D] ml-8 lg:ml-10 text-base lg:text-lg transition duration-500 transform opacity-100`}>
+                  {mapData.array.map((skills) => (
+                    <li key={skills}>
+                      {skills}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+          </div>
         </section>
       </div>
     </React.Fragment>
