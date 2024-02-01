@@ -174,6 +174,48 @@ export default function AboutMe() {
                   </div>
                 </div>
               </div>
+              <div className="absolute right-10 -bottom-5 flex">
+                <a
+                  onClick={handlePrev}
+                  className="w-12 h-12 rounded-xl bg-[#47626D] mr-1 transform transition duration-300 cursor-pointer hover:-translate-y-1 flex justify-center items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    className="w-6 h-6 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19l-7-7 7-7"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  onClick={handleNext}
+                  className="w-12 h-12 rounded-xl bg-[#47626D] mr-1 transform transition duration-300 cursor-pointer hover:-translate-y-1 flex justify-center items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    className="w-6 h-6 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </section>
