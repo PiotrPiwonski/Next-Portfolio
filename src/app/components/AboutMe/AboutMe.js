@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Hind } from "next/font/google";
 import { AboutData } from "@/app/data";
+import "./AboutMe.css";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -48,21 +49,21 @@ export default function AboutMe() {
     <React.Fragment>
       <div
         id="about-me-component"
-        className="bg-[#E0F3FD] pt-[250px] mt-10 pb-[100px] lg:pb-[600px] relative lg:h-800px"
+        className="bg-[#E0F3FD] pt-[250px] mt-10 pb-[100px] lg:pb-[600px] relative lg:h-800px dark:bg-[#08283a]"
       >
         <div className="container m-auto">
-          <h1 className="text-[240px] w-[80%] overflow-hidden absolute lg:left-40 md:left-30 top-[-50px] text-[#EAF7FC]">
+          <h1 className="text-[240px] w-[80%] overflow-hidden absolute lg:left-40 md:left-30 top-[-50px] text-[#EAF7FC] dark:text-night-50">
             About Me
           </h1>
           <h1 className="relative font-recoletaBlack text-5xl text-[#48AFDE] mb-5 -mt-40 md:px-24 px-5">
             About My Self
           </h1>
-          <h4 className="relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-recoleta text-[#223740] text-2xl mb-10 px-5 md:px-24">
+          <h4 className="relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-recoleta text-[#223740] text-2xl mb-10 px-5 md:px-24 dark:text-[#EAF7FC]">
             Knack of Building application with frontend and backend operation
           </h4>
           <section className="relative flex flex-col lg:flex-row px-5 md:px-24">
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 ${hind.className}`}
+              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 ${hind.className} dark:text-[#EAF7FC]`}
             >
               {" "}
               My name is Ehizeex. A professional and enthusiastic full-stack
@@ -73,7 +74,7 @@ export default function AboutMe() {
               to new situations.
             </p>
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 ${hind.className}`}
+              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 ${hind.className} dark:text-[#EAF7FC]`}
             >
               {" "}
               This attitude propelled me on an endless journey to learn a
@@ -83,7 +84,7 @@ export default function AboutMe() {
               design, and many more...
             </p>
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 ${hind.className}`}
+              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 ${hind.className} dark:text-[#EAF7FC]`}
             >
               {" "}
               When I encounter a new problem, I usually conduct extensive
@@ -96,11 +97,11 @@ export default function AboutMe() {
         </div>
       </div>
       <div
-        style={{
-          backgroundImage: "linear-gradient(45deg, #EAF7FC 70%, #48AFDE 30%)",
-          width: "100%",
-        }}
-        className="lg:-mt-60"
+        // style={{
+        //   backgroundImage: "linear-gradient(45deg, #EAF7FC 70%, #48AFDE 30%)",
+        //   width: "100%",
+        // }}
+        className="lg:-mt-60 bg-gradient-aboutme w-full dark:bg-gradient-aboutme-dark"
       >
         <section className="container flex  flex-col m-auto sm:flex-row px-5 md:px-24 mt-[50px] sm:mt-0 transform translate-y-[-100px]">
           <div className=" hidden sm:flex w-full sm:w-1/2 lg:w-7/12">
@@ -113,7 +114,7 @@ export default function AboutMe() {
                   className={`relative cursor-pointer transition-all transform duration-300 group rounded-xl center p-6 lg:p-10 flex flex-col justify-center items-center ${
                     selectedIndex === index
                       ? "-translate-y-2 bg-[#476571]"
-                      : "hover:bg-[#476571] hover:shadow-xl hover:-translate-y-2 bg-white"
+                      : "hover:bg-[#476571] hover:shadow-xl hover:-translate-y-2 bg-white dark:bg-night-50 dark:hover:bg-[#476571]"
                   }`}
                 >
                   <div className="w-16 h-16 sm:w-10 sm:h-10 lg:w-16 lg:h-16">
@@ -140,7 +141,7 @@ export default function AboutMe() {
             </div>
           </div>
           <div className="w-full sm:w-1/2 lg:w-5/12 overflow-visible px-0 sm:pl-6 xl:px-10">
-            <div className="bg-white rounded-xl p-10 xl:p-12 shadow-accent-color relative">
+            <div className="bg-white rounded-xl p-10 xl:p-12 shadow-accent-color relative dark:bg-night-50">
               <section
                 className={`fade-left overflow-hidden ${
                   isFaded ? "fade-out" : ""
