@@ -1,5 +1,7 @@
-import React from "react";
+'use client';
+import React, {useState} from "react";
 import { Hind } from "next/font/google";
+import { AboutData } from "@/app/data";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -7,6 +9,42 @@ const hind = Hind({
 });
 
 export default function AboutMe() {
+
+const [isFlipped, setIsFlipped] = useState(false);
+const [isFaded, setIsFaded] = useState(false);
+const [selectedIndex, setSelectedIndex] = useState(0);
+const [mapData, setMapData] = useState(AboutData[0]);
+
+const myFunctions = (data) => {
+  setIsFlipped(false);
+  setIsFaded(false);
+  setMapData(data);
+};
+
+const handleCardClick = (data, index) => {
+  setIsFlipped(true);
+  setIsFaded(true);
+  setSelectedIndex(index);
+
+  setTimeout(() => myFunctions(data), 600)
+};
+
+const handleNext = () => {
+  if(selectedIndex < 5){
+    handleCardClick(AboutData[selectedIndex + 1], selectedIndex + 1)
+  }else{
+    handleCardClick(AboutData[0], 0)
+  }
+};
+
+const handlePrev = () => {
+  if(selectedIndex !== 0){
+    handleCardClick(AboutData[selectedIndex - 1], selectedIndex - 1)
+  }else{
+    handleCardClick(AboutData[5], 5)
+  }
+};
+
   return (
     <React.Fragment>
       <div
