@@ -103,7 +103,7 @@ export default function AboutMe() {
         className="lg:-mt-60"
       >
         <section className="container flex  flex-col m-auto sm:flex-row px-5 md:px-24 mt-[50px] sm:mt-0 transform translate-y-[-100px]">
-          <div className="hidden sm:flex w-full sm:w-1/2 lg:w-7/12">
+          <div className=" hidden sm:flex w-full sm:w-1/2 lg:w-7/12">
             <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 mr-0 lg:mr-10">
               {AboutData.map((item, index) => (
                 <a
@@ -154,14 +154,26 @@ export default function AboutMe() {
                 <h2 className="font-recoletaBold text-[#47626D] text=3xl sm:text-2xl md:text-3xl mb-6 w-44 md:w-56 transition duration-500 transform opacity-100">
                   {mapData.title}
                 </h2>
-                <ul className={`${hind.className} font-[300] list-disc text-[#47626D] ml-8 lg:ml-10 text-base lg:text-lg transition duration-500 transform opacity-100`}>
+                <ul
+                  className={`${hind.className} font-[300] list-disc text-[#47626D] ml-8 lg:ml-10 text-base lg:text-lg transition duration-500 transform opacity-100`}
+                >
                   {mapData.array.map((skills) => (
-                    <li key={skills}>
-                      {skills}
-                    </li>
+                    <li key={skills}>{skills}</li>
                   ))}
                 </ul>
               </section>
+              <div
+                className={`absolute perspective-500 -top-7 sm:-top-8 right-0 sm:-right-20 card ${
+                  isFlipped ? "flipped" : ""
+                }`}
+              >
+                <div className="card-inner">
+                  <div className="rounded-2xl cursor-pointer text-7xl xl:text-9xl font-recoletaBlack text-white bg-[#47626D] p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48 transform transition duration-500 transform-preserve -rotate-6 transform-preserve">
+                    <span className="text-2xl xl:text-6xl mr-2 sm:mr-3">*</span>
+                    {mapData.count}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
