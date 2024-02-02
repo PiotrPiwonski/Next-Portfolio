@@ -3,7 +3,9 @@ import HomeComponent from "./components/HomeComponent/HomeComponent";
 import DarkMode from "./components/DarkMode/DarkMode";
 import MySlider from "./components/SliderCard/MySlider";
 import AboutMe from "./components/AboutMe/AboutMe";
+import Testimonial from "./components/Testimonial/Testimonial";
 import { Hind } from "next/font/google";
+
 
 
 const hind = Hind({
@@ -52,7 +54,8 @@ export default function Home() {
           <MySlider/>
         </div>
       </div>
-      <AboutMe/>      
+      <AboutMe/> 
+      <Testimonial/>     
     </main>
   );
 }
