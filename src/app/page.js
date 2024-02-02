@@ -1,9 +1,9 @@
 "use client";
 import HomeComponent from "./components/HomeComponent/HomeComponent";
-import DarkMode from "./components/DarkMode/DarkMode";
 import MySlider from "./components/SliderCard/MySlider";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Testimonial from "./components/Testimonial/Testimonial";
+import DarkMode from "./components/DarkMode/DarkMode";
 import { Hind } from "next/font/google";
 
 
@@ -17,7 +17,7 @@ export default function Home() {
   
   return (
     <main className="min-h-screen relative">
-      <DarkMode />
+      <DarkMode />      
       <HomeComponent />
       <div 
       id="portfolio"
