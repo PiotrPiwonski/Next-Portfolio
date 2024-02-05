@@ -136,6 +136,54 @@ export default function Footer() {
                 &copy; 2024, pqr
               </p>
             </div>
+            <div className="md:block hidden">
+              <p className="font-medium text-white font-sans">Services</p>
+              <ul className="pt-6 space-y-4 text-sm">
+                {service.map((item) => (
+                  <li key={item}>
+                    <a className="text-[#7B858B] font-sans hover:opacity-75 cursor-pointer">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="md:block hidden">
+              <p className="font-medium text-white font-sans">Company Policy</p>
+              <ul className="pt-6 space-y-4 text-sm">
+                {company.map((item) => (
+                  <li key={item}>
+                    <a className="text-[#7B858B] font-sans hover:opacity-75 cursor-pointer">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="md:block hidden">
+              <p className="font-medium text-white font-sans">Helpful Links</p>
+              <ul className="pt-6 space-y-4 text-sm">
+                {helping.map((item) => (
+                  <li key={item}>
+                    <a className="text-[#7B858B] font-sans hover:opacity-75 cursor-pointer">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="md:block hidden">
+              <p className="font-medium text-white font-sans">Legal Policies</p>
+              <ul className="pt-6 space-y-4 text-sm">
+                {legal.map((item) => (
+                  <li key={item}>
+                    <a className="text-[#7B858B] font-sans hover:opacity-75 cursor-pointer">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
