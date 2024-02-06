@@ -1,4 +1,5 @@
 import React from "react";
+import Accordian from "./Accordian";
 
 export default function Footer() {
   const service = [
@@ -50,6 +51,10 @@ export default function Footer() {
       <footer className="bg-[#223740]">
         <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
           <div className="container mx-auto md:hidden block mt-10">
+            <Accordian title="Services" content={service}/>
+            <Accordian title="Company Policy" content={company}/>
+            <Accordian title="Helpful Links" content={helping}/>
+            <Accordian title="Legal Polices" content={legal}/>
             <div className="md:hidden block">
               <div className="text-teal-600 flex justify-center mt-10">
                 <svg
