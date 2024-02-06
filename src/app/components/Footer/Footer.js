@@ -21,8 +21,8 @@ export default function Footer() {
   ];
 
   return (
-    <div id="footer" className="mt-[90px]">
-      <div className="bg-white pt-0 lg:pt-[100px]">
+    <div id="footer" className="mt-[90px] dark:bg-night-500">
+      <div className="bg-white pt-0 lg:pt-[100px] dark:bg-night-500">
         <div
           className="max-w-[1140px] bg-blue-500 rounded-xl px-[20px] sm:px-[64px] py-[64px] m-auto"
           style={{ transform: "translate(0px, 70px)" }}
