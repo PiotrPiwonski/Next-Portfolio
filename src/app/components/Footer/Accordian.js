@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Transition } from "@headlessui/react";
 
 export default function Accordian({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,9 @@ export default function Accordian({ title, content }) {
 
   return (
     <div className="border-b border-[#393939] mb-4 py-2">
-      <div 
-      className="flex justify-between items-center p-2 sm:p-4 w-full bg-red-500"
-      onClick={toggleAccordian}
+      <div
+        className="flex justify-between items-center p-2 sm:p-4 w-full bg-[#223740]"
+        onClick={toggleAccordian}
       >
         <h2 className="text-2xl text-white font-semibold">{title}</h2>
         <div className="bg-[#393939] h-8 w-8 flex justify-center items-center rounded-full">
@@ -32,6 +33,23 @@ export default function Accordian({ title, content }) {
           </svg>
         </div>
       </div>
+      <Transition
+      show={isOpen}
+      enter="transition-opacity duration-75"
+      enterFrom="opacity-0"
+      enterTo="opacity-100"
+      leave="transition-opacity duration-150"
+      leaveFrom="opacity-100"
+      leaveTo="opacity-0"
+      >
+        {(ref) => (
+          <div ref={ref} className="p-4 bg-[#223740]">
+            {content.map((item) => (
+              <p className='py-1 text-gray-400 font-sans' key={item}>{item}</p>
+            ))}
+          </div>
+        )}
+      </Transition>
     </div>
   );
 }

@@ -16,7 +16,7 @@ const hind = Hind({
 export default function Home() {
   
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative dark:bg-night-500">
       <DarkMode />      
       <HomeComponent />
       <div 
