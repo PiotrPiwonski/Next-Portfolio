@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { AiFillMail, AiOutlineFieldTime } from "react-icons/ai";
@@ -7,11 +7,48 @@ import { FaHeadphones } from "react-icons/fa";
 import { Hind } from "next/font/google";
 
 const hind = Hind({
-subsets: ["latin"],
-weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export default function page() {
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const key = e.target.name;
+    const value = e.target.value;
+    setState({
+      ...state,
+      [key]: value,
+    });
+  };
+
+  console.log(state);
+
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    const numericValue = value.replace(/[^0-9]/g, "");
+    setState({ ...state, phoneNumber: numericValue });
+  };
+
+  const clearState = () => {
+    setState({
+      name: "",
+      email: "",
+      phoneNumber: "",
+      subject: "",
+      message: "",
+    });
+  };
+
   return (
     <React.Fragment>
       <div className="flex flex-col items-center justify-center w-full pt-[80px] pb-[80px] mt-4">
@@ -162,68 +199,82 @@ export default function page() {
               </div>
               <div>
                 <button className="bg-[#48AFDE] text-white mb-[30px] px-4 py-2 hover:bg-[#223740] transition-colors rounded-xl">
-                    Let&apos;s chat
+                  Let&apos;s chat
                 </button>
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-[20px]">
-            <div className="text-center w-[100px] bg-red-500 py-[1px] tracking-wide uppercase font-300 font-sans text-[14px] text-white rounded-lg">
-                Contact Us
+          <div className="text-center w-[100px] bg-red-500 py-[1px] tracking-wide uppercase font-300 font-sans text-[14px] text-white rounded-lg">
+            Contact Us
+          </div>
+          <div className="">
+            <p className="text-[30px] text-[#48AFDE]">
+              Request A Call Back ! Feel Free To Reach & Contact Us.
+            </p>
+          </div>
+          <form className="flex flex-col gap-[20px]">
+            <div
+              className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name.."
+                required
+                onChange={handleChange}
+                value={state.name}
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your E-mail.."
+                required
+                onChange={handleChange}
+                value={state.email}
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+              />
             </div>
-            <div className="">
-                <p className="text-[30px] text-[#48AFDE]">
-                    Request A Call Back ! Feel Free To Reach & Contact Us.
-                </p>
+            <div
+              className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}
+            >
+              <input
+                type="text"
+                name="phoneNumber"
+                placeholder="Your Number.."
+                required
+                onChange={handlePhoneChange}
+                value={state.phoneNumber}
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+              />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Your Subject.."
+                required
+                onChange={handleChange}
+                value={state.subject}
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+              />
             </div>
-            <form className="flex flex-col gap-[20px]">
-                <div className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}>
-                    <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name.."
-                    required
-                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
-                    />
-                    <input
-                    type="email"
-                    name="email"
-                    placeholder="Your E-mail.."
-                    required
-                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
-                    />
-                </div>
-                <div className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}>
-                    <input
-                    type="text"
-                    name="phoneNumber"
-                    placeholder="Your Number.."
-                    required
-                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
-                    />
-                    <input
-                    type="text"
-                    name="subject"
-                    placeholder="Your Subject.."
-                    required
-                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
-                    />
-                </div>
-                <div className={`${hind.className}`}>
-                    <textarea
-                    required
-                    name="message"
-                    placeholder="Your Message.."
-                    className="px-[12px] outline-none h-[180px] w-full rounded-md py-[12px] flex-1 bg-gray-200"
-                    />
-                </div>
-                <div>
-                    <button className="bg-[#48AFDE] w-full sm:w-auto px-[30px] py-[12px] hover:bg-[#223740] transition-colors duration-300 font-semibold rounded-lg text-white">
-                        Send Us Message
-                    </button>
-                </div>
-            </form>
+            <div className={`${hind.className}`}>
+              <textarea
+                required
+                name="message"
+                placeholder="Your Message.."
+                onChange={handleChange}
+                value={state.message}
+                className="px-[12px] outline-none h-[180px] w-full rounded-md py-[12px] flex-1 bg-gray-200"
+              />
+            </div>
+            <div>
+              <button className="bg-[#48AFDE] w-full sm:w-auto px-[30px] py-[12px] hover:bg-[#223740] transition-colors duration-300 font-semibold rounded-lg text-white">
+                Send Us Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </React.Fragment>
