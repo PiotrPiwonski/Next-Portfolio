@@ -102,7 +102,7 @@ export default function Header() {
                             <span className='menu-effect transform opacity-100 rotate-12 group-hover:-rotate-12 group-hover:opacity-100'></span>
                         )}
                         <a className={`menu-item ${selectedIndex1 === 0 ? "text-black" : ""} ${selectedIndex1 === 0 ? "dark:text-[#666D47]" : ""} text-[#666D47] group-hover:text-black dark:group-hover:text-white`}
-                        href='/#home'
+                        href='/page/contactme'
                         onClick={() => setSelectedIndex1(3)}
                         >
                             Hire Me

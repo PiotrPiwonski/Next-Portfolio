@@ -17,7 +17,7 @@ module.exports = {
         "gradient-aboutme" : "linear-gradient(45deg, #EAF7FC 70%, #48AFDE 30%)",
         "gradient-aboutme-dark": "linear-gradient(45deg, #0D1120 70%, #48AFDE 30%)",
         "gradient-testimonial" : "linear-gradient(5deg, #48AFDE 0 10%, white 0% 90%)",
-        "gradient-testimonial-dark": "linear-gradient(5deg, #48AFDE 0 10%, #171E2C 0% 90%)"        
+        "gradient-testimonial-dark": "linear-gradient(5deg, #48AFDE 0 10%, #171E2C 0% 90%)"
       },
       colors: {
         night: {
