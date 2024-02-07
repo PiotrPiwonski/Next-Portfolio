@@ -130,6 +130,50 @@ export default function page() {
           </div>
         </div>
       </div>
+
+      <div
+        id="contact"
+        className="flex flex-col xl:flex-row justify-center gap-[60px] mt-[10px] px-[30px] max-w-[1105px] m-auto p-10"
+      >
+        <div>
+          <div
+            className="hidden md:block relative w-[50%] h-[550px] rounded-xl md:w-full lg:w-[50%] xl:w-[550px] bg-center bg-cover"
+            style={{ backgroundImage: `url('/customer-care.png')` }}
+          >
+            <div className="absolute h-full w-full bg-gradient-to-t from-[#223740] via-[#223740] shadow-inner opacity-70"></div>
+            <div className="absolute inset-0 flex flex-col gap-[20px] items-center justify-center text-white shadow-lg p-6">
+              <div className="text-4xl xl:mt-[150px] mt-0 rounded-full px-[15px] py-[15px] bg-[#48AFDE] text-white">
+                <FaHeadphones />
+              </div>
+              <div className="font-semibold text-[24px]">Chat With Live!</div>
+              <div>
+                <p className="text-center mt-5 font-[200] text-xl">
+                  Are you looking for a responsible, professinal full-stack
+                  developer and designer for your website or your web
+                  application projects? Just leave me a message and tell me how
+                  I can help.
+                </p>
+              </div>
+              <div>
+                <button className="bg-[#48AFDE] text-white mb-[30px] px-4 py-2 hover:bg-[#223740] transition-colors rounded-xl">
+                    Let&apos;s chat
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-[20px]">
+            <div className="text-center w-[100px] bg-red-500 py-[1px] tracking-wide uppercase font-300 font-sans text-[14px] text-white rounded-lg">
+                Contact Us
+            </div>
+            <div className="">
+                <p className="text-[30px] text-[#48AFDE]">
+                    Request A Call Back ! Feel Free To Reach & Contact Us.
+                </p>
+            </div>
+            
+        </div>
+      </div>
     </React.Fragment>
   );
 }
