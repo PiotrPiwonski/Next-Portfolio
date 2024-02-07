@@ -4,6 +4,12 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { AiFillMail, AiOutlineFieldTime } from "react-icons/ai";
 import { FaHeadphones } from "react-icons/fa";
+import { Hind } from "next/font/google";
+
+const hind = Hind({
+subsets: ["latin"],
+weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function page() {
   return (
@@ -133,7 +139,7 @@ export default function page() {
 
       <div
         id="contact"
-        className="flex flex-col xl:flex-row justify-center gap-[60px] mt-[10px] px-[30px] max-w-[1105px] m-auto p-10"
+        className="flex flex-col xl:flex-row justify-center gap-[60px] mt-[10px] px-[30px] max-w-[1105px] m-auto p-10 mb-[-160px]"
       >
         <div>
           <div
@@ -171,7 +177,53 @@ export default function page() {
                     Request A Call Back ! Feel Free To Reach & Contact Us.
                 </p>
             </div>
-            
+            <form className="flex flex-col gap-[20px]">
+                <div className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}>
+                    <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name.."
+                    required
+                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                    />
+                    <input
+                    type="email"
+                    name="email"
+                    placeholder="Your E-mail.."
+                    required
+                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                    />
+                </div>
+                <div className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}>
+                    <input
+                    type="text"
+                    name="phoneNumber"
+                    placeholder="Your Number.."
+                    required
+                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                    />
+                    <input
+                    type="text"
+                    name="subject"
+                    placeholder="Your Subject.."
+                    required
+                    className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                    />
+                </div>
+                <div className={`${hind.className}`}>
+                    <textarea
+                    required
+                    name="message"
+                    placeholder="Your Message.."
+                    className="px-[12px] outline-none h-[180px] w-full rounded-md py-[12px] flex-1 bg-gray-200"
+                    />
+                </div>
+                <div>
+                    <button className="bg-[#48AFDE] w-full sm:w-auto px-[30px] py-[12px] hover:bg-[#223740] transition-colors duration-300 font-semibold rounded-lg text-white">
+                        Send Us Message
+                    </button>
+                </div>
+            </form>
         </div>
       </div>
     </React.Fragment>
