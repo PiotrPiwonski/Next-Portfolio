@@ -5,6 +5,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Testimonial from "./components/Testimonial/Testimonial";
 import DarkMode from "./components/DarkMode/DarkMode";
 import { Hind } from "next/font/google";
+import CallToAction from "./components/CallToAction/CallToAction";
 
 
 
@@ -55,7 +56,8 @@ export default function Home() {
         </div>
       </div>
       <AboutMe/> 
-      <Testimonial/>     
+      <Testimonial/>
+      <CallToAction/>     
     </main>
   );
 }
