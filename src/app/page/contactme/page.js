@@ -5,6 +5,8 @@ import { FiPhoneCall } from "react-icons/fi";
 import { AiFillMail, AiOutlineFieldTime } from "react-icons/ai";
 import { FaHeadphones } from "react-icons/fa";
 import { Hind } from "next/font/google";
+import { ToastClassName, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -31,8 +33,6 @@ export default function page() {
     });
   };
 
-  console.log(state);
-
   const handlePhoneChange = (e) => {
     const value = e.target.value;
     const numericValue = value.replace(/[^0-9]/g, "");
@@ -49,8 +49,41 @@ export default function page() {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    let data = {
+      ...state,
+    };
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, *.*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {
+        setLoading(false);
+        const response = await res.json();
+        if (!response.error) {
+          clearState();
+          toast(response.message);
+        } else {
+          clearState();
+          toast("Something went wrong");
+        }
+      })
+      .catch((e) => {
+        setLoading(false);
+        clearState();
+        toast("Something went wrong");
+      });
+  };
+
   return (
     <React.Fragment>
+      <ToastContainer/>
       <div className="flex flex-col items-center justify-center w-full pt-[80px] pb-[80px] mt-4">
         <div className='flex flex-col items-center justify-center bg-[url("/offices.jpg")] bg-cover bg-center w-full h-[400px]'>
           <div className="flex flex-col items-center justify-center w-full h-full bg-[#223740]/70 backdrop-brightness-50">
@@ -214,7 +247,10 @@ export default function page() {
               Request A Call Back ! Feel Free To Reach & Contact Us.
             </p>
           </div>
-          <form className="flex flex-col gap-[20px]">
+          <form 
+          className="flex flex-col gap-[20px]"
+          onSubmit={handleSubmit}
+          >
             <div
               className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}
             >
