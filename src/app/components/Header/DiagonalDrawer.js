@@ -57,7 +57,7 @@ export default function DiagonalDrawer({
       </div>
       <header
         className={`fixed w-full transition-all duration-500 z-40 ${
-          pathname === "/" ? "top-0" : "top-[0px]"
+          pathname === "/" ? "top-0" : "top-0"
         }`}
       >
         <div className="relative">
