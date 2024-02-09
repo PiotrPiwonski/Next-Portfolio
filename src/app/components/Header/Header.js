@@ -37,11 +37,7 @@ export default function Header() {
             setSelectedIndex1={setSelectedIndex1}
             />
         </div>
-        <header className={`${isScrolled ? "headerShow" : ""} ${isScrolled ? "bg-white" : "bg-transparent"} ${isScrolled ? "dark:bg-night-50" : "dark:bg-transparent"} w-full fixed top-0 z-50 transition-all duration-500`}
-        style={{
-            boxShadow: isScrolled ? "#A8AFDE -10px 25px 50px 10px" : ""
-        }}
-        >
+        <header className={`${isScrolled ? "headerShow xl:dark:bg-night-50" : ""} w-full fixed top-0 z-50 transition-all duration-500`}>
 
             <div className='relative '>
                 <div 
