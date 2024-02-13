@@ -3,7 +3,6 @@ import HomeComponent from "./components/HomeComponent/HomeComponent";
 import MySlider from "./components/SliderCard/MySlider";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Testimonial from "./components/Testimonial/Testimonial";
-import DarkMode from "./components/DarkMode/DarkMode";
 import { Hind } from "next/font/google";
 import CallToAction from "./components/CallToAction/CallToAction";
 
@@ -18,7 +17,6 @@ export default function Home() {
   
   return (
     <main className="min-h-screen relative dark:bg-night-500">
-      <DarkMode />      
       <HomeComponent />
       <div 
       id="portfolio"

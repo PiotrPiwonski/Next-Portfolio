@@ -17,13 +17,18 @@ module.exports = {
         "gradient-aboutme" : "linear-gradient(45deg, #EAF7FC 70%, #48AFDE 30%)",
         "gradient-aboutme-dark": "linear-gradient(45deg, #0D1120 70%, #48AFDE 30%)",
         "gradient-testimonial" : "linear-gradient(5deg, #48AFDE 0 10%, white 0% 90%)",
-        "gradient-testimonial-dark": "linear-gradient(5deg, #48AFDE 0 10%, #171E2C 0% 90%)"
+        "gradient-testimonial-dark": "linear-gradient(5deg, #48AFDE 0 10%, #171E2C 0% 90%)",
+        "gradient-portfolio-detail": "linear-gradient(90deg, rgba(238, 247, 251, 1) 58%, rgba(255, 255, 255, 1) 52%)",
+        "gradient-portfolio-detail-dark": "linear-gradient(90deg, #0c4a64 58%, #171E2C 52%)"
       },
       colors: {
         night: {
           DEFAULT: "#0D1120",
           50: "#171E2C",
           500: "#0D1120"
+        },
+        example: {
+          
         }
       },
     },
