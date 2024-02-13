@@ -5,7 +5,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { AiFillMail, AiOutlineFieldTime } from "react-icons/ai";
 import { FaHeadphones } from "react-icons/fa";
 import { Hind } from "next/font/google";
-import { ToastClassName, ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const hind = Hind({
@@ -110,7 +110,7 @@ export default function page() {
           <div className="sm:flex gap-[20px] mt-[50px] max-w-[1105px] w-full h-full">
             <div className="flex flex-col flex-1 xl:flex-row gap-[20px] pt-[20px]">
               <div
-                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white"
+                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white dark:bg-night-50 dark:hover:bg-[#223740]"
                 style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
               >
                 <div className="flex items-center gap-[15px]">
@@ -133,7 +133,7 @@ export default function page() {
               </div>
 
               <div
-                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white"
+                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white  dark:bg-night-50 dark:hover:bg-[#223740]"
                 style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
               >
                 <div className="flex items-center gap-[15px]">
@@ -158,7 +158,7 @@ export default function page() {
 
             <div className="flex flex-col flex-1 xl:flex-row gap-[20px] pt-[20px]">
               <div
-                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white"
+                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white  dark:bg-night-50 dark:hover:bg-[#223740]"
                 style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
               >
                 <div className="flex items-center gap-[15px]">
@@ -181,7 +181,7 @@ export default function page() {
               </div>
 
               <div
-                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white"
+                className="flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white  dark:bg-night-50 dark:hover:bg-[#223740]"
                 style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
               >
                 <div className="flex items-center gap-[15px]">
@@ -261,7 +261,7 @@ export default function page() {
                 required
                 onChange={handleChange}
                 value={state.name}
-                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200 dark:bg-night-50"
               />
               <input
                 type="email"
@@ -270,7 +270,7 @@ export default function page() {
                 required
                 onChange={handleChange}
                 value={state.email}
-                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200 dark:bg-night-50"
               />
             </div>
             <div
@@ -283,7 +283,7 @@ export default function page() {
                 required
                 onChange={handlePhoneChange}
                 value={state.phoneNumber}
-                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200 dark:bg-night-50"
               />
               <input
                 type="text"
@@ -292,7 +292,7 @@ export default function page() {
                 required
                 onChange={handleChange}
                 value={state.subject}
-                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200"
+                className="px-[12px] outline-none rounded-md py-[12px] flex-1 bg-gray-200 dark:bg-night-50"
               />
             </div>
             <div className={`${hind.className}`}>
@@ -302,7 +302,7 @@ export default function page() {
                 placeholder="Your Message.."
                 onChange={handleChange}
                 value={state.message}
-                className="px-[12px] outline-none h-[180px] w-full rounded-md py-[12px] flex-1 bg-gray-200"
+                className="px-[12px] outline-none h-[180px] w-full rounded-md py-[12px] flex-1 bg-gray-200 dark:bg-night-50"
               />
             </div>
             <div>

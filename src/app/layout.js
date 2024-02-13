@@ -1,6 +1,6 @@
 import "./globals.css";
 import localFont from '@next/font/local';
-
+import DarkMode from "./components/DarkMode/DarkMode";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.className} dark:bg-night-500`}>        
         <Header/>
+        <DarkMode />
         {children}
         <Footer/>
       </body>
